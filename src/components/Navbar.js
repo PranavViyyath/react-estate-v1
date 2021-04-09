@@ -13,7 +13,7 @@ padding: 1rem 2rem;
 z-index: 100;
 position: fixed;
 width: 100%;
-background:red;
+// background:red;
 `;
 
 const NavLink = css`
@@ -72,11 +72,11 @@ margin-right:24px;
 }
 `;
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
     return (
         <Nav>
             <Logo to='/'>ELIXR</Logo>
-            <MenuBars />
+            <MenuBars onClick={toggle}/>
             <NavMenu>
                 {
                     menuData.map((item, index) => (
